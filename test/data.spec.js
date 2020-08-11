@@ -1,4 +1,5 @@
 import { filterByRol } from '../src/data.js';
+import { orderNames } from "../src/data.js";
 
 const pruebaRol = [{
   name: "Aatrox",
@@ -18,4 +19,11 @@ const pruebaRol = [{
   it('debería retornar [{name:"Aatrox",tags: ["Fighter", "Tank"]}] para tipo Fighter', () => {
     expect(filterByRol(pruebaRol,"Fighter")).toEqual([{name:"Aatrox",tags: ["Fighter", "Tank"]}]);
   });
+});
+
+describe('orderNames', () => {
+  it('deberia ser una funcion', () => {
+    expect(typeof orderNames).toBe('function');
+  });
+
 });
